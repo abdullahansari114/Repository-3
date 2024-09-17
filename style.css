@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+ .abd{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    opacity: 0.7;
+}
+
+
+ul{
+
+    display: flex;
+    list-style-type: none;
+    justify-content: end;
+    width: 100%;
+    height: 8vh;
+    position: absolute;
+    margin-top: 15px;
+    background: rgba(0,0,0,0.2);
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+ul li a{
+    text-decoration: none;
+    margin: 17px;
+    color: black;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul li a:hover{
+    color: white;
+}
+
+#head{
+    position: absolute;
+    margin-top: 2.3%;
+    margin-left: 5%;
+    font-size: 20px;
+    color: #000;
+    animation: heartBeat 1s infinite linear;
+}
+
+
+h1{
+    position: absolute;
+    margin-top: 26%;
+    margin-left: 29%;
+    font-size: 33px;
+    color: transparent;
+    -webkit-text-stroke: 0.2vw black;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+
+}
+
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    color: darkgreen;
+    -webkit-text-stroke: 0vw darkgreen;
+    border-right: 1px solid darkgreen;
+    overflow: hidden;
+    animation: ani 4s linear infinite;
+}
+
+@keyframes ani {
+    0% , 10% , 100%{
+        width: 0;
+    }
+    70% , 90%{
+        width: 100%;
+    }
+}
+
+
+h4{
+    position: absolute;
+    margin-top: 33%;
+    margin-left: 28%;
+    font-size: 30px;
+    font-weight: 900;
+    text-shadow: 2px 1px 4px black;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.btn{
+    position: absolute;
+    margin-top: 38%;
+    margin-left: 36%;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: #000;
+    color: white;
+    height: 7vh;
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
+
+.change_content:after{
+    content: "";
+    animation: changetext 5s infinite linear;
+    color: darkgreen;
+}
+
+@keyframes changetext{
+    0%{content: "Islamabad";}
+    20% {content: "Karachi";}
+    35% {content: "Lahore";}
+    60% {content: "Peshawar";}
+    80% {content: "Quetta";}
+    100% {content: "Multan";}
+}
+
+
+
+
+
+
+#about{
+    color: black;
+    margin-top: 0%;
+    margin-left: 38%;
+    font-size: 37px;
+}
+
+
+#a{
+    width: 50%;
+    display: flex;
+    margin-left: 25%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+#a:hover{
+    transform: scale(1.2);
+}
+
+
+.card{
+    
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.7);
+}
+
+
+.card_content h2{
+    color: black;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+}
+
+.card_content p{
+    color: black;
+    margin-top: 20px;
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#form{
+    color: black;
+    margin-left: 40%;
+}
+
+input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    outline: none;
+    font-size: 12px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+
+#bb{
+    color: white;
+    font-size: 10px;
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    width: 110px;
+    height: 30px;  
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-right: 60px;
+}
+
+#bb:hover{
+    background-color: gray;
+}
+
+
+.ccc{
+    background-color: white;
+}
+
+#contact{
+    text-align: center;
+    margin-top: 0%;
+    margin-left: 0%;
+    color: black;
+    font-size: 35px;
+}
+
+
+
+#map{
+    width: 20%;
+    position: absolute;
+    left: 20px;
+    top: 80px;
+    z-index: 2;
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly{
+    0%{
+        left: -250px;
+    }
+    20%{
+        left: 250px;
+    }
+    80%{
+        left: 250px;
+    }
+    100%{
+        left: 110%;
+    }
+}
+
+.footerContainer{
+    background-color: black;
+    width: 100%;
+    
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+
+
+
